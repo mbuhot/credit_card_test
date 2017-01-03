@@ -9,6 +9,7 @@ pipelines:
   default:
     - step:
         script:
+          - mix local.hex --force
           - mix deps.get
           - mix compile
           - mix test
