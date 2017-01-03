@@ -4,7 +4,7 @@ defmodule CreditCardValidator.Mixfile do
   def project do
     [app: :credit_card_validator,
      name: "Credit Card Validator",
-     source_url: "https://github.com/mbuhot/creditcard_test",
+     source_url: "https://bitbucket.org/mikebuhot/creditcard_test",
      version: "1.2.0",
      elixir: "~> 1.2",
      escript: escript_config,
@@ -35,7 +35,7 @@ defmodule CreditCardValidator.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{ :ex_doc, github: "elixir-lang/ex_doc" },
-     {:earmark, ">= 0.0.0"}]
+    [{:ex_doc, "~> 0.14"},
+     {:earmark, "~> 1.0"}]
   end
 end
