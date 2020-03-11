@@ -20,7 +20,7 @@ defmodule CreditCardValidatorTest do
 
   test "AMEX card must have 15 digits - too few" do
     assert {:Unknown, "343456", :invalid} == validate_card("343456")
-    assert {:Unknown, "37345678901234567",:invalid} == validate_card("37345678901234567")
+    assert {:Unknown, "37345678901234567", :invalid} == validate_card("37345678901234567")
   end
 
   test "Discover card must have 16 digits starting with 6601" do
@@ -47,7 +47,7 @@ defmodule CreditCardValidatorTest do
   test "Integration test" do
     input = File.read!("test/creditcards.txt")
     expected = File.read!("test/expected_output.txt")
-    output = capture_io(input, fn () -> CreditCardValidator.CLI.main([]) end)
+    output = capture_io(input, fn -> CreditCardValidator.CLI.main([]) end)
     assert expected == output
   end
 end

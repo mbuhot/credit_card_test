@@ -30,7 +30,8 @@ defmodule CreditCardValidator.Mixfile do
     [
       {:ex_doc, "> 0.14.0"},
       {:earmark, "> 1.0.0"},
-      {:dialyxir, "1.0.0-rc.7"}
+      {:dialyxir, "1.0.0-rc.7"},
+      {:credo, "~> 1.3.0"}
     ]
   end
 end

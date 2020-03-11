@@ -33,7 +33,7 @@ defmodule CreditCardValidator.CLI do
   Shows the help screen.
   """
   @spec help() :: :ok
-  def help() do
+  def help do
     IO.puts("""
     usage: credit_card_validator <inputs.txt >output.txt
     inputs.txt should be formatted with 1 credit card number per line
@@ -46,7 +46,7 @@ defmodule CreditCardValidator.CLI do
   validates each one and outputs a formatted table to stdout.
   """
   @spec process() :: :ok
-  def process() do
+  def process do
     IO.stream(:stdio, :line)
     |> Stream.map(&String.trim/1)
     |> Stream.map(&validate_card/1)

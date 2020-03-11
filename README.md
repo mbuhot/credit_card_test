@@ -48,3 +48,9 @@ mix test
 ```
 mix dialyzer
 ```
+
+## Running Credo
+
+```
+mix credo
+```
