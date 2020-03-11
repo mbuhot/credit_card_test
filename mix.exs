@@ -29,7 +29,8 @@ defmodule CreditCardValidator.Mixfile do
   defp deps do
     [
       {:ex_doc, "> 0.14.0"},
-      {:earmark, "> 1.0.0"}
+      {:earmark, "> 1.0.0"},
+      {:dialyxir, "1.0.0-rc.7"}
     ]
   end
 end

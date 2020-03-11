@@ -5,11 +5,13 @@ Elixir library and command line application for validating credit cards.
 ## Build and run
 
 Ensure Elixir is installed
+
 ```
 brew update && brew install elixir
 ```
 
 Use mix to build an escript binary
+
 ```
 mix escript.build
 ./credit_card_validator <test/creditcards.txt
@@ -30,6 +32,7 @@ Unknown: 9111111111111111    (invalid)
 mix docs
 open doc/index.html
 ```
+
 [View Docs](./doc/index.html)
 
 ## Running tests
@@ -37,10 +40,11 @@ open doc/index.html
 ```
 mix test
 ```
+
 [View Tests](./test/credit_card_validator_test.exs)
 
 ## Running Dialyzer
 
 ```
-mix compile && dialyzer _build/dev/lib/credit_card_validator/ebin/
+mix dialyzer
 ```
