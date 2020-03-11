@@ -1,52 +1,58 @@
-    <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.14.5">
-    <title>CreditCardValidator – Credit Card Validator v1.2.0</title>
-    <link rel="stylesheet" href="dist/app-a07cea761b.css" />
-    
-    <script src="dist/sidebar_items-e4a29fb139.js"></script>
+    <meta name="generator" content="ExDoc v0.21.3">
+    <meta name="project" content="Credit Card Validator v1.2.0">
+    <title>CreditCardValidator — Credit Card Validator v1.2.0</title>
+    <link rel="stylesheet" href="dist/elixir-0ab8a6a80ebaaa287431.css" />
+    <script src="dist/sidebar_items-a4432d6568.js"></script>
+      <script src="docs_config.js"></script>
+    <script async src="dist/app-a225d03098e64fef431a.js"></script>
   </head>
   <body data-type="modules">
-    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
+    <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
+<div class="main">
 
-    <div class="main">
-<button class="sidebar-toggle">
-  <i class="icon-menu"></i>
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" title="Collapse/expand sidebar"></span>
 </button>
-<section class="sidebar">
 
-  
-  <a href="api-reference.html" class="sidebar-projectLink">
+<section class="sidebar">
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button">
+      <span class="icon-cross" title="Cancel search"></span>
+    </button>
+    <label class="search-label">
+      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Search" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
     <div class="sidebar-projectDetails">
-      <h1 class="sidebar-projectName">
-        Credit Card Validator
-      </h1>
+      <a href="api-reference.html" class="sidebar-projectName">
+Credit Card Validator      </a>
       <h2 class="sidebar-projectVersion">
         v1.2.0
       </h2>
     </div>
-    
-  </a>
-
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
   </div>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
-    
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-    
 
-    
-
-    
   </ul>
   <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
@@ -56,21 +62,17 @@
   <div class="content-outer">
     <div id="content" class="content-inner">
 
-
       <h1>
-        <small class="visible-xs">Credit Card Validator v1.2.0</small>
-        CreditCardValidator
-        
-        
-          <a href="https://bitbucket.org/mikebuhot/creditcard_test/src/master/lib/credit_card_validator.ex#cl-1" title="View Source" class="view-source" rel="help">
-            <i class="icon-code"></i>
+        <small class="app-vsn">Credit Card Validator v1.2.0</small>
+CreditCardValidator          <a href="https://github.com/mbuhot/credit_card_test/blob/master/lib/credit_card_validator.ex#L1" title="View Source" class="view-source" rel="help">
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
           </a>
-        
       </h1>
 
-      
+
         <section id="moduledoc">
-          <p>Defines the core domain logic for validating credit cards.</p>
+<p>Defines the core domain logic for validating credit cards.</p>
 <p>A credit card is given simply as a String, which may contain spaces.</p>
 <p>validate_card/1 can be used to find the type and validity of a card.
 card_type/1 can be used to only find the type of a card.
@@ -79,275 +81,191 @@ luhn/1 can be used to only validate the digits.</p>
 <p>Note that the card_type logic is baked into the code of this module, not externalized into a config.
 This should be fine, as erlang/elixir supports module updating in running applications.
 As new types are added, simply create additional clauses for card_type/1 and reload the module.</p>
-
         </section>
-      
 
-      
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Summary
           </h1>
-          
   <div class="summary-types summary">
     <h2>
       <a href="#types">Types</a>
     </h2>
-    <div class="summary-row">
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#t:card_number/0">card_number()</a>
   </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#t:card_type/0">card_type()</a>
   </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#t:card_validation/0">card_validation()</a>
   </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#t:validation/0">validation()</a>
   </div>
-  
 </div>
-
   </div>
-
-
-          
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
     </h2>
-    <div class="summary-row">
+<div class="summary-row">
   <div class="summary-signature">
-    <a href="#card_type/1">card_type(arg1)</a>
+    <a href="#card_type/1">card_type(card)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Pattern match on the leading digits and length of a credit card number to determining the type.</p>
-<ul>
-<li>:AMEX -&gt; 15 digits beginning with 3,4 or 3,7
-</li>
-<li>:Discover -&gt; 16 digits beginning with 6,0,1,1
-</li>
-<li>:MasterCard -&gt; 16 digits beginning with 5,1-5
-</li>
-<li>:Visa -&gt; 13 or 16 digits beginning with 4
-</li>
-<li>:Unknown -&gt; otherwise
-</li>
-</ul>
-</div>
-  
+    <div class="summary-synopsis"><p>Pattern match on the leading digits and length of a credit card number to determining the type.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#digit_list/1">digit_list(card)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Convert a credit card number string into a list of integer digits.
-This is later used for pattern matching and luhn validation</p>
-</div>
-  
+This is later used for pattern matching and luhn validation.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#digit_string/1">digit_string(card)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Removes all whitespace from a credit card number, producing a large integer string</p>
-</div>
-  
+    <div class="summary-synopsis"><p>Removes all whitespace from a credit card number, producing a large integer string.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#luhn/1">luhn(digits)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Validate a credit card number using the Luhn algorithm.
 The input must already be split into a digit list, eg with Integer.digits or CreditCardValidator.digit_list
-See https://en.wikipedia.org/wiki/Luhn_algorithm for a complete description</p>
-</div>
-  
+See <a href="https://en.wikipedia.org/wiki/Luhn_algorithm">https://en.wikipedia.org/wiki/Luhn_algorithm</a> for a complete description.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#validate_card/1">validate_card(card)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Given a string representing a credit card number, returns a tuple containing
 card type atom, card number string, and atom for validity of the card.
 Card type rules are defined by the card_type/1 function.
-Validity rules are defined by the luhn/1 function</p>
+Validity rules are defined by the luhn/1 function.</p></div>
 </div>
-  
-</div>
-
   </div>
-
-
-          
-
-          
-
         </section>
-      
 
-      
         <section id="types" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#types">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
-            Types
-          </h1>
+Types          </h1>
           <div class="types-list">
-            <div class="detail" id="t:card_number/0">
-  
+<section class="detail" id="t:card_number/0">
   <div class="detail-header">
     <a href="#t:card_number/0" class="detail-link" title="Link to this type">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
     </a>
-    <span class="signature">card_number()</span>
-    
-      <a href="https://bitbucket.org/mikebuhot/creditcard_test/src/master/lib/credit_card_validator.ex#cl-19" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+    <h1 class="signature">card_number()</h1>
+      <a href="https://github.com/mbuhot/credit_card_test/blob/master/lib/credit_card_validator.ex#L19" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
       <div class="specs">
-        
-          <pre>card_number() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a></pre>
-        
+          <pre>card_number() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    
   </section>
-</div>
-<div class="detail" id="t:card_type/0">
-  
+</section>
+<section class="detail" id="t:card_type/0">
   <div class="detail-header">
     <a href="#t:card_type/0" class="detail-link" title="Link to this type">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
     </a>
-    <span class="signature">card_type()</span>
-    
-      <a href="https://bitbucket.org/mikebuhot/creditcard_test/src/master/lib/credit_card_validator.ex#cl-18" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+    <h1 class="signature">card_type()</h1>
+      <a href="https://github.com/mbuhot/credit_card_test/blob/master/lib/credit_card_validator.ex#L18" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
       <div class="specs">
-        
           <pre>card_type() :: :AMEX | :Discover | :MasterCard | :VISA | :Unknown</pre>
-        
       </div>
-    
   </div>
   <section class="docstring">
-    
   </section>
-</div>
-<div class="detail" id="t:card_validation/0">
-  
+</section>
+<section class="detail" id="t:card_validation/0">
   <div class="detail-header">
     <a href="#t:card_validation/0" class="detail-link" title="Link to this type">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
     </a>
-    <span class="signature">card_validation()</span>
-    
-      <a href="https://bitbucket.org/mikebuhot/creditcard_test/src/master/lib/credit_card_validator.ex#cl-21" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+    <h1 class="signature">card_validation()</h1>
+      <a href="https://github.com/mbuhot/credit_card_test/blob/master/lib/credit_card_validator.ex#L21" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
       <div class="specs">
-        
-          <pre>card_validation() :: {<a href="#t:card_type/0">card_type</a>, <a href="#t:card_number/0">card_number</a>, <a href="#t:validation/0">validation</a>}</pre>
-        
+          <pre>card_validation() :: {<a href="#t:card_type/0">card_type</a>(), <a href="#t:card_number/0">card_number</a>(), <a href="#t:validation/0">validation</a>()}</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    
   </section>
-</div>
-<div class="detail" id="t:validation/0">
-  
+</section>
+<section class="detail" id="t:validation/0">
   <div class="detail-header">
     <a href="#t:validation/0" class="detail-link" title="Link to this type">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
     </a>
-    <span class="signature">validation()</span>
-    
-      <a href="https://bitbucket.org/mikebuhot/creditcard_test/src/master/lib/credit_card_validator.ex#cl-20" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+    <h1 class="signature">validation()</h1>
+      <a href="https://github.com/mbuhot/credit_card_test/blob/master/lib/credit_card_validator.ex#L20" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
       <div class="specs">
-        
           <pre>validation() :: :valid | :invalid</pre>
-        
       </div>
-    
   </div>
   <section class="docstring">
-    
   </section>
-</div>
-
+</section>
           </div>
         </section>
-      
-
-      
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
-            Functions
-          </h1>
-          <div class="detail" id="card_type/1">
-  
+Functions          </h1>
+          <div class="functions-list">
+<section class="detail" id="card_type/1">
   <div class="detail-header">
     <a href="#card_type/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">card_type(arg1)</span>
-    
-      <a href="https://bitbucket.org/mikebuhot/creditcard_test/src/master/lib/credit_card_validator.ex#cl-78" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+    <h1 class="signature">card_type(card)</h1>
+      <a href="https://github.com/mbuhot/credit_card_test/blob/master/lib/credit_card_validator.ex#L78" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
       <div class="specs">
-        
-          <pre>card_type([integer]) :: <a href="#t:card_type/0">card_type</a></pre>
-        
+          <pre>card_type([<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()]) :: <a href="#t:card_type/0">card_type</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Pattern match on the leading digits and length of a credit card number to determining the type.</p>
+<p>Pattern match on the leading digits and length of a credit card number to determining the type.</p>
 <ul>
 <li>:AMEX -&gt; 15 digits beginning with 3,4 or 3,7
 </li>
@@ -361,184 +279,162 @@ Validity rules are defined by the luhn/1 function</p>
 </li>
 </ul>
 <h2 id="card_type/1-example" class="section-heading">
-  <a href="#card_type/1-example" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#card_type/1-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; CreditCardValidator.card_type([4,2,3,4,5,6,7,8,9,0,1,2,3])
-:VISA
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">CreditCardValidator</span><span class="o">.</span><span class="n">card_type</span><span class="p" data-group-id="1724984341-1">(</span><span class="p" data-group-id="1724984341-2">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p" data-group-id="1724984341-2">]</span><span class="p" data-group-id="1724984341-1">)</span><span class="w">
+</span><span class="ss">:VISA</span><span class="w">
 
-iex&gt; CreditCardValidator.card_type([1,2,3,4,5])
-:Unknown</code></pre>
-
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">CreditCardValidator</span><span class="o">.</span><span class="n">card_type</span><span class="p" data-group-id="1724984341-3">(</span><span class="p" data-group-id="1724984341-4">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p" data-group-id="1724984341-4">]</span><span class="p" data-group-id="1724984341-3">)</span><span class="w">
+</span><span class="ss">:Unknown</span></code></pre>
   </section>
-</div>
-<div class="detail" id="digit_list/1">
-  
+</section>
+<section class="detail" id="digit_list/1">
   <div class="detail-header">
     <a href="#digit_list/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">digit_list(card)</span>
-    
-      <a href="https://bitbucket.org/mikebuhot/creditcard_test/src/master/lib/credit_card_validator.ex#cl-50" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+    <h1 class="signature">digit_list(card)</h1>
+      <a href="https://github.com/mbuhot/credit_card_test/blob/master/lib/credit_card_validator.ex#L50" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
       <div class="specs">
-        
-          <pre>digit_list(<a href="#t:card_number/0">card_number</a>) :: [integer]</pre>
-        
+          <pre>digit_list(<a href="#t:card_number/0">card_number</a>()) :: [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()]</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Convert a credit card number string into a list of integer digits.
+<p>Convert a credit card number string into a list of integer digits.
 This is later used for pattern matching and luhn validation.</p>
 <h2 id="digit_list/1-example" class="section-heading">
-  <a href="#digit_list/1-example" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#digit_list/1-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; CreditCardValidator.digit_list(&quot;3754 3210 987 654 321&quot;)
-[3, 7, 5, 4, 3, 2, 1, 0, 9, 8, 7, 6, 5, 4, 3, 2, 1]</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">CreditCardValidator</span><span class="o">.</span><span class="n">digit_list</span><span class="p" data-group-id="2534458329-1">(</span><span class="s">&quot;3754 3210 987 654 321&quot;</span><span class="p" data-group-id="2534458329-1">)</span><span class="w">
+</span><span class="p" data-group-id="2534458329-2">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="2534458329-2">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="digit_string/1">
-  
+</section>
+<section class="detail" id="digit_string/1">
   <div class="detail-header">
     <a href="#digit_string/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">digit_string(card)</span>
-    
-      <a href="https://bitbucket.org/mikebuhot/creditcard_test/src/master/lib/credit_card_validator.ex#cl-60" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+    <h1 class="signature">digit_string(card)</h1>
+      <a href="https://github.com/mbuhot/credit_card_test/blob/master/lib/credit_card_validator.ex#L60" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
       <div class="specs">
-        
-          <pre>digit_string(<a href="#t:card_number/0">card_number</a>) :: <a href="#t:card_number/0">card_number</a></pre>
-        
+          <pre>digit_string(<a href="#t:card_number/0">card_number</a>()) :: <a href="#t:card_number/0">card_number</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Removes all whitespace from a credit card number, producing a large integer string.</p>
+<p>Removes all whitespace from a credit card number, producing a large integer string.</p>
 <h2 id="digit_string/1-example" class="section-heading">
-  <a href="#digit_string/1-example" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#digit_string/1-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; CreditCardValidator.digit_string(&quot;3754 3210 987 654 321&quot;)
-&quot;37543210987654321&quot;</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">CreditCardValidator</span><span class="o">.</span><span class="n">digit_string</span><span class="p" data-group-id="7436145523-1">(</span><span class="s">&quot;3754 3210 987 654 321&quot;</span><span class="p" data-group-id="7436145523-1">)</span><span class="w">
+</span><span class="s">&quot;37543210987654321&quot;</span></code></pre>
   </section>
-</div>
-<div class="detail" id="luhn/1">
-  
+</section>
+<section class="detail" id="luhn/1">
   <div class="detail-header">
     <a href="#luhn/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">luhn(digits)</span>
-    
-      <a href="https://bitbucket.org/mikebuhot/creditcard_test/src/master/lib/credit_card_validator.ex#cl-98" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+    <h1 class="signature">luhn(digits)</h1>
+      <a href="https://github.com/mbuhot/credit_card_test/blob/master/lib/credit_card_validator.ex#L98" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
       <div class="specs">
-        
-          <pre>luhn([integer]) :: <a href="#t:validation/0">validation</a></pre>
-        
+          <pre>luhn([<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()]) :: <a href="#t:validation/0">validation</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Validate a credit card number using the Luhn algorithm.
+<p>Validate a credit card number using the Luhn algorithm.
 The input must already be split into a digit list, eg with Integer.digits or CreditCardValidator.digit_list
-See https://en.wikipedia.org/wiki/Luhn_algorithm for a complete description.</p>
+See <a href="https://en.wikipedia.org/wiki/Luhn_algorithm">https://en.wikipedia.org/wiki/Luhn_algorithm</a> for a complete description.</p>
 <h2 id="luhn/1-example" class="section-heading">
-  <a href="#luhn/1-example" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#luhn/1-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; CreditCardValidator.luhn([4,4,0,8,0,4,1,2,3,4,5,6,7,8,9,3])
-:valid
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">CreditCardValidator</span><span class="o">.</span><span class="n">luhn</span><span class="p" data-group-id="2929474899-1">(</span><span class="p" data-group-id="2929474899-2">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p" data-group-id="2929474899-2">]</span><span class="p" data-group-id="2929474899-1">)</span><span class="w">
+</span><span class="ss">:valid</span><span class="w">
 
-iex&gt; CreditCardValidator.luhn([4,4,0,8,0,4,1,2,3,4,5,6,7,8,9,4])
-:invalid</code></pre>
-
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">CreditCardValidator</span><span class="o">.</span><span class="n">luhn</span><span class="p" data-group-id="2929474899-3">(</span><span class="p" data-group-id="2929474899-4">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p" data-group-id="2929474899-4">]</span><span class="p" data-group-id="2929474899-3">)</span><span class="w">
+</span><span class="ss">:invalid</span></code></pre>
   </section>
-</div>
-<div class="detail" id="validate_card/1">
-  
+</section>
+<section class="detail" id="validate_card/1">
   <div class="detail-header">
     <a href="#validate_card/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">validate_card(card)</span>
-    
-      <a href="https://bitbucket.org/mikebuhot/creditcard_test/src/master/lib/credit_card_validator.ex#cl-34" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+    <h1 class="signature">validate_card(card)</h1>
+      <a href="https://github.com/mbuhot/credit_card_test/blob/master/lib/credit_card_validator.ex#L34" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
       <div class="specs">
-        
-          <pre>validate_card(<a href="#t:card_number/0">card_number</a>) :: <a href="#t:card_validation/0">card_validation</a></pre>
-        
+          <pre>validate_card(<a href="#t:card_number/0">card_number</a>()) :: <a href="#t:card_validation/0">card_validation</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Given a string representing a credit card number, returns a tuple containing
+<p>Given a string representing a credit card number, returns a tuple containing
 card type atom, card number string, and atom for validity of the card.
 Card type rules are defined by the card_type/1 function.
 Validity rules are defined by the luhn/1 function.</p>
 <h2 id="validate_card/1-example" class="section-heading">
-  <a href="#validate_card/1-example" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#validate_card/1-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; CreditCardValidator.validate_card(&quot;3434 5678 9012 345&quot;)
-{:AMEX, &quot;3434 5678 9012 345&quot;, :invalid}</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">CreditCardValidator</span><span class="o">.</span><span class="n">validate_card</span><span class="p" data-group-id="0507912776-1">(</span><span class="s">&quot;3434 5678 9012 345&quot;</span><span class="p" data-group-id="0507912776-1">)</span><span class="w">
+</span><span class="p" data-group-id="0507912776-2">{</span><span class="ss">:AMEX</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;3434 5678 9012 345&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">:invalid</span><span class="p" data-group-id="0507912776-2">}</span></code></pre>
   </section>
-</div>
-
+</section>
+          </div>
         </section>
-      
-
-      
-
-      
-          <footer class="footer">
+      <footer class="footer">
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.5),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.21.3),
           </span>
           <span class="line">
             designed by
-            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
-            </span>
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
         </p>
-        <button class="night-mode-toggle" />
+        <p>
+          <button class="line footer-button display-shortcuts-help">
+            Display keyboard shortcuts
+          </button>
+          <button class="line footer-button night-mode-toggle">
+            Toggle night mode
+          </button>
+          <button class="line footer-button display-quick-switch">
+            Go to a HexDocs package
+          </button>
+          <button class="line footer-button tooltips-toggle">
+            <span class="tooltips-option-disable">Disable tooltips</span>
+            <span class="tooltips-option-enable">Enable tooltips</span>
+          </button>
+        </p>
       </footer>
     </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-4aef34ad5f.js"></script>
   </body>
 </html>
-
