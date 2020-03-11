@@ -48,7 +48,7 @@ defmodule CreditCardValidator.CLI do
   @spec process() :: :ok
   def process() do
     IO.stream(:stdio, :line)
-    |> Stream.map(&String.strip/1)
+    |> Stream.map(&String.trim/1)
     |> Stream.map(&validate_card/1)
     |> Stream.map(&format_output/1)
     |> Enum.each(&IO.puts/1)
@@ -63,6 +63,7 @@ defmodule CreditCardValidator.CLI do
   """
   @spec format_output(CreditCardValidator.card_validation()) :: String.t()
   def format_output({type, card, valid}) do
-    "#{String.ljust("#{type}: #{digit_string(card)}", 28)} (#{valid})"
+    padded = String.pad_trailing("#{type}: #{digit_string(card)}", 28)
+    "#{padded} (#{valid})"
   end
 end
